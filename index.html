@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link href="style/style.css" rel="stylesheet">
+  <script src="lib.js"></script>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+  <body>
+    <h1>Test Video</h1>
+    <div class="container">
+      <h2>Select Options</h2>
+    <section id="Selection" style="margin-bottom: 20px;">
+      <label><input type="radio" name="selection" value="left"> Left</label>
+      <label><input type="radio" name="selection" value="right"> Right</label>
+    </section>
+    <section id="videoSourceSelection" style="margin-bottom: 20px; display:none;">
+      <label><input type="radio" name="videoSource" value="file"> File from PC</label>
+      <input type="file" id="fileInput" style="display:none;" accept="video/*">
+      <label><input type="radio" name="videoSource" value="webcam"> Live Webcam</label>
+    </section>
+    <section id="player">
+      <button id="startPlayer" style="display:none;">START VIDEO PLAYER</button>
+      <div style="position: relative;">
+          <div id="liveView" class="videoView">
+              <video id="videoInput" playsinline></video>
+              <canvas id="canvasOutput"></canvas>
+            </div>
+      </div>
+    </section>
+  </body>
+</html>
